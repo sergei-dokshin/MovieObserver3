@@ -16,7 +16,7 @@ export const getEventsList = unstable_cache(
       const events = await prisma.event.findMany({
         where: {
           city:
-            city === 'All' ? undefined : { equals: city, mode: 'insensitive' }
+            city === 'all' ? undefined : { equals: city, mode: 'insensitive' }
         },
         orderBy: { date: 'asc' },
 
@@ -28,7 +28,7 @@ export const getEventsList = unstable_cache(
       const totalEvents = await prisma.event.count({
         where: {
           city:
-            city === 'All' ? undefined : { equals: city, mode: 'insensitive' }
+            city === 'all' ? undefined : { equals: city, mode: 'insensitive' }
         }
       });
 
