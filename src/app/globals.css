@@ -1,9 +1,10 @@
 @import 'tailwindcss';
 
-/* Добавляем свои переменные */
+/* Кастомные переменные */
 @theme {
-  --color-accent: #a4f839;
+  --color-accent: #e600e6;
   --font-pacifico: 'var(--font-pacifico)';
+  --breakpoint-xs: 450px;
 }
 
 /* Кастомный класс для эффектов увеличения элемента */

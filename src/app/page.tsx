@@ -1,46 +1,47 @@
+import Carousel from '@/components/Carousel';
+import GenreBadge from '@/components/GenreBadge';
 import H1 from '@/components/H1';
+import MovieCard from '@/components/MovieCard';
 import SearchForm from '@/components/SearchForm';
+import Section from '@/components/section/Section';
+import SectionHeading from '@/components/section/SectionHeading';
+import { popGenres } from '@/constants/pop-genres';
+import { getPopularMovies } from '@/services/movies.service';
 import Link from 'next/link';
 
-const popCities = [
-  {
-    name: 'Москва',
-    path: '/events/moskva'
-  },
-  {
-    name: 'Краснодар',
-    path: '/events/krasnodar'
-  }
-];
+const HomePage = async () => {
+  const popularMovies = await getPopularMovies();
 
-export default function Home() {
   return (
-    <main className="flex flex-col items-center px-2 pt-30">
-      <H1>Интересное рядом с Вами!</H1>
-      <p className="mb-12 mt-7 text-2xl lg:text-3xl opacity-70">
-        Более{' '}
-        <span className="font-bold italic underline text-accent">
-          10,000 событий
-        </span>{' '}
-        вокруг Вас
+    <main className="flex flex-col items-center px-2 pt-20 min-h-[120vh]">
+      <H1>Все фильмы планеты!</H1>
+      <p className="mb-12 mt-7 text-2xl lg:text-3xl opacity-80">
+        Поиск среди{' '}
+        <span className="font-bold italic text-accent">более 447 млн.</span>{' '}
+        фильмов и сериалов
       </p>
 
       <SearchForm />
 
-      <section className="flex mt-4 mb-3 gap-x-4 text-sm text-white/50">
-        <p>Популярное:</p>
-        <div className="space-x-2 font-semibold">
-          {popCities.map((city) => (
-            <Link
-              href={city.path}
-              className="hover:text-white/80"
-              key={city.name}
-            >
-              {city.name}
+      {/* Поиск по жанрам */}
+      <section className="flex items-center mt-4 mb-3 gap-x-4 text-sm text-white/50">
+        <p>Популярные жанры:</p>
+        <div className="flex flex-nowrap items-center gap-2 font-semibold">
+          {popGenres.map((item) => (
+            <Link href="" className="hover:text-accent/80" key={item.id}>
+              <GenreBadge genre={item} />
             </Link>
           ))}
         </div>
       </section>
+
+      {/* Карусель */}
+      <Section className="mt-15">
+        <SectionHeading>Чаще всего ищут:</SectionHeading>
+        <Carousel moviesList={popularMovies} timeInterval={4000} />
+      </Section>
     </main>
   );
-}
+};
+
+export default HomePage;

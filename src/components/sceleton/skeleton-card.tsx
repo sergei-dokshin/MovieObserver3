@@ -9,7 +9,7 @@ const SkeletonCard = ({ className }: SkeletonCardProps) => {
   return (
     <div
       className={cn(
-        'flex flex-col items-center h-70 basis-70 max-w-[400px] min-w-[280px] bg-white/5 rounded-md pb-2 gap-y-3',
+        'flex flex-col items-center h-70 basis-40 max-w-[250px] min-w-[200px] bg-white/5 rounded-md pb-2 gap-y-3',
         className
       )}
     >

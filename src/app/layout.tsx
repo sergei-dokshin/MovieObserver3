@@ -24,8 +24,8 @@ const pacifico = Pacifico({
 });
 
 export const metadata: Metadata = {
-  title: 'Festival - интересное вокруг Вас',
-  description: 'Более 10,000 событий на любой вкус!'
+  title: 'MovieObserver - все фильмы планеты',
+  description: 'Более 447млн. фильмов и сериалов'
 };
 
 export default function RootLayout({

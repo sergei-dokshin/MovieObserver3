@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: 'robohash.org',
+        hostname: 'image.tmdb.org',
         protocol: 'https'
       },
       {

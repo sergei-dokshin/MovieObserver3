@@ -8,7 +8,12 @@ type SectionParagraphProps = {
 
 const SectionParagraph = ({ children, className }: SectionParagraphProps) => {
   return (
-    <p className={cn('max-w-4xl text-lg leading-8 text-white/75', className)}>
+    <p
+      className={cn(
+        'max-w-4xl  leading-8 text-white/75 sm:text-lg',
+        className
+      )}
+    >
       {children}
     </p>
   );

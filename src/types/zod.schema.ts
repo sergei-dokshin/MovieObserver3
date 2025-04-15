@@ -3,11 +3,11 @@ import { z } from 'zod';
 // приводим значение к числу(если возможно) и валидируем
 export const pageNumberSchema = z.coerce.number().int().positive().optional();
 
-export const cityInputSchema = z
+export const homepageInputSchema = z
   .string()
-  .min(2, 'Минимум 2 символа')
-  .max(30, 'Максимум 30 символов')
+  .min(3, 'Минимум 3 символа')
+  .max(40, 'Максимум 40 символов')
   .regex(
     /^[a-zA-Zа-яА-ЯёЁ\s-]+$/,
-    'Название города может содержать только буквы, пробелы и дефисы'
+    'Используйте только буквы, цифры и пробелы'
   );

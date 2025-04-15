@@ -1,13 +1,17 @@
 'use client';
+
 import Link from 'next/link';
 import Logo from './Logo';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { cn } from '@/utils/cn';
+import SearchForm from './SearchForm';
 
 const routes = [
   { name: 'Главная', path: '/' },
-  { name: 'Все события', path: '/events/all' }
+  { name: 'Топ 250', path: '/movies/top250' },
+  { name: 'Популярное', path: '/movies/popular' },
+  { name: 'Сейчас в кино', path: '/movies/now_playing' }
 ];
 
 const Header = () => {
@@ -16,6 +20,8 @@ const Header = () => {
   return (
     <header className="flex justify-between items-center border-b border-white/10 h-14 px-1  sm:px-5">
       <Logo />
+
+      <SearchForm className="h-8 sm:w-[400px] mx-1 text-sm px-3" />
 
       <nav className="h-full">
         <ul className="flex space-x-4 text-sm h-full">
