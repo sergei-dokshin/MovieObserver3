@@ -7,7 +7,6 @@ import SimilarMovies from '@/components/SimilarMovies';
 import TrailerWrap from '@/components/TrailerWrap';
 import { getMovie, getMovieCast } from '@/services/movies.service';
 import { runtimeFormatter } from '@/utils/runtimeFormatter';
-import { li } from 'framer-motion/client';
 import { Metadata } from 'next';
 import Image from 'next/image';
 

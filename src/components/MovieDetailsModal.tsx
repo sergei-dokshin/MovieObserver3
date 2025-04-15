@@ -1,12 +1,10 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
 import { getMovie } from '@/services/movies.service';
-import { APIMovie, Movie } from '@/types/movie';
-import SkeletonLine from './sceleton/sceleton-line';
+import { Movie } from '@/types/movie';
 import Image from 'next/image';
-import { Cross1Icon, CrossCircledIcon } from '@radix-ui/react-icons';
+import { CrossCircledIcon } from '@radix-ui/react-icons';
 import GenreBadge from './GenreBadge';
 import { runtimeFormatter } from '@/utils/runtimeFormatter';
 

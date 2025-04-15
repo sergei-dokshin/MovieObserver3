@@ -1,5 +1,5 @@
 import { API_KEY, BASE_URL } from '@/constants/tmdbAPI';
-import { MovieCast } from '@/types/cast';
+import { CrewMember, MovieCast } from '@/types/cast';
 import { APIMovie, Movie, MoviesList } from '@/types/movie';
 
 export const getMoviesList = async (query: string): Promise<APIMovie[]> => {
@@ -41,7 +41,7 @@ export const getMovieCast = async (id: string): Promise<MovieCast> => {
 
     return {
       ...data,
-      crew: data.crew.filter((member: any) => member.job === 'Director') // Только режиссёры
+      crew: data.crew.filter((member: CrewMember) => member.job === 'Director') // Только режиссёры
     };
   } catch (error) {
     console.error('Ошибка при получении данных о съёмочной группе:', error);

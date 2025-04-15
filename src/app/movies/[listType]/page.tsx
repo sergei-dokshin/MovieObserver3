@@ -1,17 +1,17 @@
 import H1 from '@/components/H1';
-import MovieDetailsModal from '@/components/MovieDetailsModal';
 import MoviesListClient from '@/components/MoviesListClient';
 import { movieListsConfig } from '@/constants/moviesListConfig';
 import { notFound } from 'next/navigation';
 
 type Props = {
-  params: {
+  params: Promise<{
     listType: keyof typeof movieListsConfig;
-  };
+  }>;
 };
 
 const MoviesListPage = async ({ params }: Props) => {
   const awaitedParams = await params;
+
   const config = movieListsConfig[awaitedParams.listType];
 
   if (!config) return notFound();

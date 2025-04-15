@@ -23,7 +23,7 @@ const SearchForm = ({ className }: SearchFormProps) => {
 
   const debouncedSearch = useDebounce(search, 400);
 
-  const { movies, isLoading, isError } = useMoviesSearch(debouncedSearch);
+  const { movies } = useMoviesSearch(debouncedSearch); // isLoading, isError - сделать позже
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -92,7 +92,7 @@ const SearchForm = ({ className }: SearchFormProps) => {
                   </p>
                   <div className="flex gap-x-2 sm:gap-x-2 text-gray-400 mt-auto w-[60%] sm:w-[80%] overflow-hidden">
                     {movie.genres.slice(0, 4).map((genre) => (
-                      <GenreBadge genre={genre} />
+                      <GenreBadge genre={genre} key={genre.id}/>
                     ))}
                   </div>
                 </div>

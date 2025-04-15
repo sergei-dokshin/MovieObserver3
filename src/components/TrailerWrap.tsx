@@ -10,7 +10,9 @@ const TrailerWrap = async ({ movieId }: TrailerWrapProps) => {
 
   return (
     <section className="flex flex-col items-center mb-20">
-      <SectionHeading className="mb-5">"{trailer?.name}"</SectionHeading>
+      <SectionHeading className="mb-5">
+        &quot;{trailer?.name}&quot;
+      </SectionHeading>
       {trailer ? (
         <iframe
           className="rounded-md shadow-xl border-white/50 border-2 shadow-white/15"

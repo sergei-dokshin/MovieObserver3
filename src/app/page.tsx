@@ -1,7 +1,6 @@
 import Carousel from '@/components/Carousel';
 import GenreBadge from '@/components/GenreBadge';
 import H1 from '@/components/H1';
-import MovieCard from '@/components/MovieCard';
 import SearchForm from '@/components/SearchForm';
 import Section from '@/components/section/Section';
 import SectionHeading from '@/components/section/SectionHeading';

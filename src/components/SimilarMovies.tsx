@@ -1,12 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import Section from './section/Section';
-import SectionHeading from './section/SectionHeading';
+import Section from '@/components/section/Section';
+import SectionHeading from '@/components/section/SectionHeading';
 import { getSimilarMovies } from '@/services/movies.service';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import { APIMovie, Movie } from '@/types/movie';
+import { APIMovie } from '@/types/movie';
 import { ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons';
 import { createPortal } from 'react-dom';
 
@@ -16,7 +16,7 @@ const SimilarMovies = ({ id }: { id: string }) => {
   const tooltipTimeout = useRef<NodeJS.Timeout | null>(null);
   const [tooltip, setTooltip] = useState<{
     show: boolean;
-    movie?: Movie | null;
+    movie?: APIMovie | null;
     x: number;
     y: number;
     alignLeft: boolean;
@@ -28,7 +28,7 @@ const SimilarMovies = ({ id }: { id: string }) => {
     alignLeft: false
   });
 
-  const handleMouseEnter = (event: React.MouseEvent, movie: any) => {
+  const handleMouseEnter = (event: React.MouseEvent, movie: APIMovie) => {
     if (!scrollRef.current) return;
     if (tooltipTimeout.current) clearTimeout(tooltipTimeout.current);
 
