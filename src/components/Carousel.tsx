@@ -76,7 +76,7 @@ export default function Carousel({ moviesList, timeInterval }: CarouselProps) {
               width={400}
               height={300}
               alt={`Movie poster ${movie.title}`}
-              className="h-60 xs:h-90 object-center"
+              className="w-full h-60 xs:h-90 object-cover object-center"
             />
           </Link>
         ))}
