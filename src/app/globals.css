@@ -2,7 +2,10 @@
 
 /* Кастомные переменные */
 @theme {
-  --color-accent: #e600e6;
+  --color-accent: #9d174d;
+  --color-error: #9d2323;
+  --color-dark-main: #030712;
+  --color-dark-lighter: #101828;
   --font-pacifico: 'var(--font-pacifico)';
   --breakpoint-xs: 450px;
 }

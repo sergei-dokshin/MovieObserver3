@@ -18,7 +18,7 @@ const Header = () => {
   const activePathname = usePathname(); // требует 'use client'
 
   return (
-    <header className="flex justify-between items-center border-b border-white/10 h-14 px-1  sm:px-5">
+    <header className="flex justify-between items-center bg-dark-lighter border-b border-white/10 h-14 px-1 sm:px-5">
       <Logo />
 
       <SearchForm className="h-8 sm:w-[400px] mx-1 text-sm px-3" />

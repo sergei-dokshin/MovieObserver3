@@ -14,7 +14,7 @@ const HomePage = async () => {
   return (
     <main className="flex flex-col items-center px-2 pt-20 min-h-[120vh]">
       <H1>Все фильмы планеты!</H1>
-      <p className="mb-12 mt-7 text-2xl lg:text-3xl opacity-80">
+      <p className="mb-12 mt-7 text-2xl lg:text-3xl opacity-90">
         Поиск среди{' '}
         <span className="font-bold italic text-accent">более 447 млн.</span>{' '}
         фильмов и сериалов

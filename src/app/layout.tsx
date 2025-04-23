@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased bg-gray-950 text-white overflow-y-scroll`}
+        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased bg-dark-main text-white overflow-y-scroll`}
       >
         <MainContainer>
           <Header />

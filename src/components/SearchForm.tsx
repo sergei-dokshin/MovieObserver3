@@ -52,7 +52,7 @@ const SearchForm = ({ className }: SearchFormProps) => {
           placeholder="Поиск фильмов..."
           spellCheck={false}
           className={cn(
-            `sm:w-[600px] h-12 rounded-lg bg-white/[7%] pr-12 pl-6 outline-none ring-accent/50 focus:ring-2 focus:bg-white/10 transition ${inputError && 'ring-2 ring-red-700'}`,
+            `sm:w-[600px] h-12 rounded-lg bg-white/[7%] pr-12 pl-6 outline-none ring-accent/80 focus:ring-2 focus:bg-white/10 transition ${inputError && 'ring-2 ring-error'}`,
             className
           )}
         />
