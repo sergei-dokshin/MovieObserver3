@@ -4,9 +4,10 @@ import { APIMovie, Movie, MoviesList } from '@/types/movie';
 
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
+
 export const getMoviesList = async (query: string): Promise<APIMovie[]> => {
   if (!query) return [];
-
+  console.log('API KEY:', API_KEY);
   const response = await fetch(
     `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`
   );
