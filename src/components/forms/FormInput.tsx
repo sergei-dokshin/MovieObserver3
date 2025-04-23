@@ -3,7 +3,7 @@ import { InfoCircledIcon } from '@radix-ui/react-icons';
 import { useState } from 'react';
 import { FieldError, Path, UseFormRegister } from 'react-hook-form';
 
-interface FormInputProps<T extends Record<string, any>> {
+interface FormInputProps<T extends Record<string, string>> {
   name: Path<T>;
   type?: string;
   placeholder?: string;
@@ -12,7 +12,7 @@ interface FormInputProps<T extends Record<string, any>> {
   className?: string;
 }
 
-const FormInput = <T extends Record<string, any>>({
+const FormInput = <T extends Record<string, string>>({
   name,
   type = 'text',
   placeholder = '',
