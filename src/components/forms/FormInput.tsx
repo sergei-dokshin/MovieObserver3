@@ -1,11 +1,7 @@
 import { cn } from '@/utils/cn';
 import { InfoCircledIcon } from '@radix-ui/react-icons';
 import { useState } from 'react';
-import {
-  FieldError,
-  Path,
-  UseFormRegister
-} from 'react-hook-form';
+import { FieldError, Path, UseFormRegister } from 'react-hook-form';
 
 interface FormInputProps<T extends Record<string, any>> {
   name: Path<T>;

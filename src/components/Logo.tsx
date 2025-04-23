@@ -1,14 +1,22 @@
+import { cn } from '@/utils/cn';
 import Link from 'next/link';
 
-const Logo = () => {
+interface LogoProps {
+  className?: string;
+  disabledLink?: boolean;
+}
+
+const Logo = ({ className, disabledLink }: LogoProps) => {
   return (
     <Link
-      href="/"
-      className="select-none text-xs md:text-sm font-pacifico px-2 text-center leading-tight"
+      href={disabledLink ? '' : '/'}
+      className={cn(
+        'select-none text-xs md:text-sm font-pacifico px-2 text-center leading-tight',
+        className,
+        disabledLink && 'cursor-default'
+      )}
     >
-      Movie
-      <br />
-      Observer
+      Movie Observer
     </Link>
   );
 };
