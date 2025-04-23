@@ -1,6 +1,8 @@
-import { API_KEY, BASE_URL } from '@/constants/tmdbAPI';
+import { BASE_URL } from '@/constants/tmdbAPI';
 import { CrewMember, MovieCast } from '@/types/cast';
 import { APIMovie, Movie, MoviesList } from '@/types/movie';
+
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
 export const getMoviesList = async (query: string): Promise<APIMovie[]> => {
   if (!query) return [];
